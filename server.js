@@ -14,10 +14,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000; // Use dynamic PORT for hosting platforms
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow requests from the React app
+  origin: process.env.CLIENT_URL || 'http://localhost:5173', // Allow requests from the React app or production client
   methods: ['GET', 'POST'],
 }));
 app.use(express.json()); // Middleware for parsing JSON
@@ -96,6 +96,6 @@ app.post('/api/send-emails', async (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => { // Bind to 0.0.0.0
+  console.log(`Server is running on port ${PORT}`);
 });
