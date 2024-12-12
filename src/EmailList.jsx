@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 function EmailList() {
   const [emails, setEmails] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [sending, setSending] = useState(false); // For showing the email sending status
 
   useEffect(() => {
     // Fetch emails from the backend
@@ -22,6 +22,20 @@ function EmailList() {
     fetchEmails();
   }, []);
 
+  // Function to trigger email sending
+  const handleSendEmails = async () => {
+    setSending(true);
+    try {
+      const response = await axios.post('http://localhost:5000/api/send-emails');
+      alert(response.data.message); // Show success message
+    } catch (error) {
+      console.error('Error sending emails:', error);
+      alert('Failed to send emails.');
+    } finally {
+      setSending(false);
+    }
+  };
+
   if (loading) return <p>Loading emails...</p>;
 
   return (
@@ -32,6 +46,9 @@ function EmailList() {
           <li key={index}>{email}</li>
         ))}
       </ul>
+      <button onClick={handleSendEmails} disabled={sending}>
+        {sending ? 'Sending Emails...' : 'Send Emails'}
+      </button>
     </div>
   );
 }

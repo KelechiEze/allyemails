@@ -2,11 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url'; 
+import { fileURLToPath } from 'url';
 import nodemailer from 'nodemailer';
 import csv from 'csv-parser';
 import dotenv from 'dotenv';
-
 
 dotenv.config();
 
@@ -18,10 +17,10 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'http://localhost:5173', // Allow requests from the React app
   methods: ['GET', 'POST'],
 }));
-
+app.use(express.json()); // Middleware for parsing JSON
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -31,16 +30,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-
+// Function to read CSV data
 async function getCsvData() {
-  const filePath = path.join(__dirname, 'data', 'SAMPLE-EMAILS - Sheet1.csv'); 
+  const filePath = path.join(__dirname, 'data', 'SAMPLE-EMAILS - Sheet1.csv');
   const emails = [];
 
   return new Promise((resolve, reject) => {
     fs.createReadStream(filePath)
       .pipe(csv())
       .on('data', (row) => {
-        if (row.email) emails.push(row.email); 
+        if (row.email) emails.push(row.email);
       })
       .on('end', () => {
         resolve(emails);
@@ -52,6 +51,7 @@ async function getCsvData() {
   });
 }
 
+// Function to send emails
 async function sendEmails() {
   try {
     const emails = await getCsvData();
@@ -61,44 +61,19 @@ async function sendEmails() {
         from: process.env.EMAIL_USER,
         to: email,
         subject: 'Success! AllyHub’s New Email Feature is Live!',
-        text: `Dear [Recipient's Name],
+        text: 'This is a test email sent from the backend.',
+      };
 
-                We are thrilled to inform you that the implementation of our new email feature using Google Sheets has been a success! With this update, AllyHub can seamlessly send important updates, announcements, and more to our valued subscribers directly from our Google Sheets data.
-
-                This improvement allows us to stay connected with you in a more efficient and timely manner, ensuring that you don’t miss out on essential information. We appreciate your support and trust in AllyHub, and we look forward to serving you better through this new feature.
-
-                **Here’s what this means for you:**
-                - **Timely Updates:** You’ll receive the latest updates from AllyHub directly in your inbox.
-                - **Enhanced Communication:** With our automated system, communication is streamlined, ensuring you are always in the loop.
-                - **Reliability:** Our enhanced setup using Google Sheets and secure email channels keeps your data safe while allowing us to communicate effectively.
-
-                Thank you for being a part of the AllyHub community. If you have any questions, feedback, or would simply like to connect, please don’t hesitate to reach out.
-
-                Warm regards,
-
-                AllyHub Team
-                [Your Position, e.g., Support Team]
-                AllyHub
-
-                Contact Us: [Your Contact Information]
-                Website: [Your Website URL]`,
-               };
-
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          return console.error('Error sending email:', error);
-        }
-        console.log('Email sent:', info.response);
-      });
+      await transporter.sendMail(mailOptions);
+      console.log(`Email sent to: ${email}`);
     }
+
+    return { success: true, message: 'Emails sent successfully.' };
   } catch (error) {
-    console.error('Error fetching data or sending emails:', error);
+    console.error('Error sending emails:', error);
+    return { success: false, message: 'Error sending emails.' };
   }
 }
-
-
-// Send emails every 1 minute
-setInterval(sendEmails, 1 * 60 * 1000);
 
 // API endpoint to fetch emails
 app.get('/api/emails', async (req, res) => {
@@ -110,6 +85,17 @@ app.get('/api/emails', async (req, res) => {
   }
 });
 
+// API endpoint to send emails manually
+app.post('/api/send-emails', async (req, res) => {
+  const result = await sendEmails();
+  if (result.success) {
+    res.status(200).json({ message: result.message });
+  } else {
+    res.status(500).json({ message: result.message });
+  }
+});
+
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
