@@ -26,7 +26,7 @@ function EmailList() {
   const handleSendEmails = async () => {
     setSending(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/send-emails');
+      const response = await axios.post('https://allyemails.onrender.com/api/send-emails');
       alert(response.data.message); // Show success message
     } catch (error) {
       console.error('Error sending emails:', error);
