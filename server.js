@@ -58,7 +58,7 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -137,8 +137,6 @@ async function sendEmails() {
   </table>
 </body>
 </html>
-
-
     `;
 
     for (const email of emails) {
