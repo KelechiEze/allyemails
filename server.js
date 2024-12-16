@@ -138,6 +138,7 @@ async function sendEmails() {
 </body>
 </html>
 
+
     `;
 
     for (const email of emails) {
