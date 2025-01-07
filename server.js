@@ -58,209 +58,52 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-                  <!DOCTYPE html>
+                 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takeover at the Summit 2025 Invitation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        }
-
-        .email-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-        }
-
-        .header {
-            background-color: #002f6c;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            min-height: 200px;
-        }
-
-        .header img {
-            max-width: 150px;
-        }
-
-        .header h1 {
-            margin: 45px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .header p {
-            font-size: 25px;
-            margin-top: 5px;
-            position: absolute;
-            bottom: 55px;
-            left: 50%;
-            right: -45%;
-            transform: translateX(-50%);
-            text-align: center;
-            z-index: 3;
-        }
-
-        .register-button-container {
-            margin-top: 15px;
-        }
-
-        .register-button {
-            display: inline-block;
-            background-color: #ff6600;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .main-content {
-            padding: 20px;
-            position: relative;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .main-content p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .main-content .chess-image {
-            width: 100px;
-            position: absolute;
-        }
-
-        .main-content .chess-image.top-left {
-            top: 10;
-            left: 30px;
-        }
-
-        .main-content .chess-image.bottom-right {
-            bottom: 10px;
-            right: 30px;
-        }
-
-        .details {
-            position: relative;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .details .event-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 0px;
-        }
-
-        .details .shadow-frame {
-            width: 93%;
-            height: 93%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(-1);
-            border-radius: 5%;
-            z-index: 1;
-        }
-
-        .details .overlay-image {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 30%;
-            height: 30%;
-            object-fit: fill;
-            z-index: 2;
-            transform: translate(-50%, -50%);
-        }
-
-        .details p {
-            position: relative;
-            z-index: 3;
-            margin-top: 20px;
-            font-size: 16px;
-            color: #333;
-        }
-
-        .footer {
-            background-color: #002f6c;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            font-size: 20px;
-        }
-
-        .footer a {
-            color: #ff6600;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .social-icons img {
-            width: 30px;
-            margin: 0 5px;
-        }
-    </style>
 </head>
 
-<body>
-    <div class="email-container">
-        <div class="header">
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #ddd;">
+        <div style="background-color: #002f6c; color: #ffffff; text-align: center; padding: 20px; position: relative; min-height: 200px;">
             <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/thesummit-2023-1-e1712249826695-1.png" alt="Takeover at the Summit" style="position: absolute; top: 10px; left: 10px; width: 150px;">
             <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/globedesign.png" alt="Globe Design" style="position: absolute; bottom: 0; right: 0; width: 200px; z-index: 1;">
-            <h1>Welcome to Takeover at the Summit 2025 </h1>
-            <p>You’re Invited To Takeover At The Summit 2025!</p>
-            <div class="register-button-container">
-                <a href="#" class="register-button">Register Now</a>
+            <h1 style="margin: 45px; font-size: 28px; font-weight: bold;">Welcome to Takeover at the Summit 2025</h1>
+            <p style="font-size: 25px; margin-top: 5px; position: absolute; bottom: 55px; left: 50%; right: -45%; transform: translateX(-50%); text-align: center; z-index: 3;">You’re Invited To Takeover At The Summit 2025!</p>
+            <div style="margin-top: 15px;">
+                <a href="#" style="display: inline-block; background-color: #ff6600; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold;">Register Now</a>
             </div>
         </div>
 
-        <div class="main-content">
-            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" class="chess-image top-left">
-            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" class="chess-image bottom-right">
-            <p>Dear [Recipient's Name],</p>
-            <p>
-                We are thrilled to invite you to Takeover 2025,
-                an extraordinary event where innovation,
-                creativity, and collaboration come together to shape the future.
+        <div style="padding: 20px; position: relative; text-align: center; background-color: #f9f9f9;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" style="width: 100px; position: absolute; top: 10; left: 30px;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" style="width: 100px; position: absolute; bottom: 10px; right: 30px;">
+            <p style="font-size: 18px; color: #555; line-height: 1.6;">Dear [Recipient's Name],</p>
+            <p style="font-size: 18px; color: #555; line-height: 1.6;">
+                We are thrilled to invite you to Takeover 2025, an extraordinary event where innovation, creativity, and collaboration come together to shape the future.
             </p>
         </div>
 
-        <div class="details">
-            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/image-one.jpeg" alt="Event Image" class="event-image">
-            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/shadow-frame.png" alt="Shadow Frame" class="shadow-frame">
-            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/3rd-section.png" alt="Overlay Image" class="overlay-image">
-            <p>
+        <div style="position: relative; text-align: center; padding: 20px;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/image-one.jpeg" alt="Event Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0px;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/shadow-frame.png" alt="Shadow Frame" style="width: 93%; height: 93%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(-1); border-radius: 5%; z-index: 1;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/3rd-section.png" alt="Overlay Image" style="position: absolute; top: 50%; left: 50%; width: 30%; height: 30%; object-fit: fill; z-index: 2; transform: translate(-50%, -50%);">
+            <p style="position: relative; z-index: 3; margin-top: 20px; font-size: 16px; color: #333;">
                 For more information, visit: <a href="http://www.gharvestisland.org" style="color: #002f6c;">www.gharvestisland.org</a>
             </p>
         </div>
 
-        <div class="footer">
+        <div style="background-color: #002f6c; color: #ffffff; text-align: center; padding: 15px; font-size: 20px;">
             <p>Follow us:</p>
-            <div class="social-icons">
-                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png" alt="Facebook"></a>
-                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" alt="Instagram"></a>
-                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png" alt="LinkedIn"></a>
+            <div>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png" alt="Facebook" style="width: 30px; margin: 0 5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/twitter.png" alt="Twitter" style="width: 30px; margin: 0 5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" alt="Instagram" style="width: 30px; margin: 0 5px;"></a>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png" alt="LinkedIn" style="width: 30px; margin: 0 5px;"></a>
             </div>
         </div>
     </div>
