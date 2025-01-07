@@ -274,7 +274,7 @@ async function sendEmails() {
       const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: 'Merry Christmas from Ally-Hub!',
+        subject: 'Welcome to Takeover at The Summit',
         html: emailTemplate, // Use the HTML template
       };
 
