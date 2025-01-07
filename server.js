@@ -58,7 +58,7 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-                   <!DOCTYPE html>
+                  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -225,8 +225,8 @@ async function sendEmails() {
 <body>
     <div class="email-container">
         <div class="header">
-            <img src="images/TheSummit-2023-1-e1712249826695 1.png" alt="Takeover at the Summit" style="position: absolute; top: 10px; left: 10px; width: 150px;">
-            <img src="images/Globedesign.png" alt="Globe Design" style="position: absolute; bottom: 0; right: 0; width: 200px; z-index: 1;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/thesummit-2023-1-e1712249826695-1.png" alt="Takeover at the Summit" style="position: absolute; top: 10px; left: 10px; width: 150px;">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/globedesign.png" alt="Globe Design" style="position: absolute; bottom: 0; right: 0; width: 200px; z-index: 1;">
             <h1>Welcome to Takeover at the Summit 2025 </h1>
             <p>You’re Invited To Takeover At The Summit 2025!</p>
             <div class="register-button-container">
@@ -235,8 +235,8 @@ async function sendEmails() {
         </div>
 
         <div class="main-content">
-            <img src="images/Chess design.png" alt="Chess Design" class="chess-image top-left">
-            <img src="images/Chess design.png" alt="Chess Design" class="chess-image bottom-right">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" class="chess-image top-left">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" class="chess-image bottom-right">
             <p>Dear [Recipient's Name],</p>
             <p>
                 We are thrilled to invite you to Takeover 2025,
@@ -246,9 +246,9 @@ async function sendEmails() {
         </div>
 
         <div class="details">
-            <img src="images/image one.jpeg" alt="Event Image" class="event-image">
-            <img src="images/shadow frame.png" alt="Shadow Frame" class="shadow-frame">
-            <img src="images/3rd section.png" alt="Overlay Image" class="overlay-image">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/image-one.jpeg" alt="Event Image" class="event-image">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/shadow-frame.png" alt="Shadow Frame" class="shadow-frame">
+            <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/3rd-section.png" alt="Overlay Image" class="overlay-image">
             <p>
                 For more information, visit: <a href="http://www.gharvestisland.org" style="color: #002f6c;">www.gharvestisland.org</a>
             </p>
