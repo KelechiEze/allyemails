@@ -58,79 +58,216 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                      <meta charset="UTF-8">
-                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                      <title>Christmas Email</title>
-                      <style>
-                        .facebook-icon, .instagram-icon, .twitter-icon {
-                          filter: invert(100%) brightness(100%);
-                        }
-                      </style>
-                    </head>
-                    <body style="margin: 0; padding: 0; font-family: 'Georgia', serif; background-color: #e8f4f3;">
-                      <table width="100%" cellpadding="0" cellspacing="0" style="padding: 80px;">
-                        <tr>
-                          <td align="center">
-                            <table width="550px" cellpadding="0" cellspacing="0" style="background-image: url('https://kelechieze.wordpress.com/wp-content/uploads/2024/12/img_480.jpg'); background-repeat: no-repeat; background-size: 100% 635px; background-position: center; background-color: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-                              <!-- Image at the top -->
-                              <tr>
-                                <td style="padding: 20px; text-align: center;">
-                                  <img src="https://kelechieze.wordpress.com/wp-content/uploads/2024/12/logoi-removebg-preview.png" alt="Logan Bakery" style="width: 150px; height: 150px; margin-bottom: 10px;">
-                                </td>
-                              </tr>
-                              <!-- Greeting -->
-                              <tr>
-                                <td style="padding: 20px; text-align: center;">
-                                  <h1 style="margin: 0; color: #db4a39; font-size: 30px;">MERRY <span style="color: #4caf50;">CHRISTMAS!</span></h1>
-                                </td>
-                              </tr>
-                              <!-- Message -->
-                              <tr>
-                                <td style="padding: 30px 80px; text-align: center; color: #555555; font-size: 18px; line-height: 1.5;">
-                                  <p style="margin: 0; font-size: 18px;">May your days be filled with peace, hope, and joy this holiday season.</p>
-                                  <p style="margin: 20px 0 0 0; font-size: 18px;">As always, thank you for your business, loyalty, and support.</p>
-                                </td>
-                              </tr>
-                              <!-- Footer -->
-                              <tr>
-                                <td style="padding: 20px 40px; text-align: center;">
-                                  <p style="margin: 0; font-size: 16px; color: #555555;">Sincerely,</p>
-                                  <p style="margin: 5px 0 0 0; font-size: 18px; font-weight: bold; color: #BB0C56;">ALLY-HUB TEAM</p>
-                                </td>
-                              </tr>
-                              <!-- Social Media Icons -->
-                              <tr>
-                                <td style="padding: 20px; background-color: #FF7222;">
-                                  <table width="100%" cellpadding="0" cellspacing="0" style="text-align: center;">
-                                    <tr>
-                                      <td style="width: 25%;">
-                                        <a href="https://www.facebook.com/yourpage" target="_blank">
-                                          <img src="https://kelechieze.wordpress.com/wp-content/uploads/2024/12/faybook.png" alt="Facebook" class="facebook-icon" style="max-width: 20%;">
-                                        </a>
-                                      </td>
-                                      <td style="width: 33.33%;">
-                                        <a href="https://www.instagram.com/yourpage" target="_blank">
-                                          <img src="https://kelechieze.wordpress.com/wp-content/uploads/2024/12/ig.png" alt="Instagram" class="instagram-icon" style="max-width: 20%;">
-                                        </a>
-                                      </td>
-                                      <td style="width: 33.33%;">
-                                        <a href="https://www.twitter.com/yourpage" target="_blank">
-                                          <img src="https://kelechieze.wordpress.com/wp-content/uploads/2024/12/twittwit.png" alt="Twitter" class="twitter-icon" style="max-width: 20%;">
-                                        </a>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </body>
-                    </html>
+                   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeover at the Summit 2025 Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+        }
+
+        .header {
+            background-color: #002f6c;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .header img {
+            max-width: 150px;
+        }
+
+        .header h1 {
+            margin: 45px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 25px;
+            margin-top: 5px;
+            position: absolute;
+            bottom: 55px;
+            left: 50%;
+            right: -45%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 3;
+        }
+
+        .register-button-container {
+            margin-top: 15px;
+        }
+
+        .register-button {
+            display: inline-block;
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .main-content {
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .main-content .chess-image {
+            width: 100px;
+            position: absolute;
+        }
+
+        .main-content .chess-image.top-left {
+            top: 10;
+            left: 30px;
+        }
+
+        .main-content .chess-image.bottom-right {
+            bottom: 10px;
+            right: 30px;
+        }
+
+        .details {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .details .event-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px;
+        }
+
+        .details .shadow-frame {
+            width: 93%;
+            height: 93%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(-1);
+            border-radius: 5%;
+            z-index: 1;
+        }
+
+        .details .overlay-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30%;
+            height: 30%;
+            object-fit: fill;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+        }
+
+        .details p {
+            position: relative;
+            z-index: 3;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .footer {
+            background-color: #002f6c;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        .footer a {
+            color: #ff6600;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="images/TheSummit-2023-1-e1712249826695 1.png" alt="Takeover at the Summit" style="position: absolute; top: 10px; left: 10px; width: 150px;">
+            <img src="images/Globedesign.png" alt="Globe Design" style="position: absolute; bottom: 0; right: 0; width: 200px; z-index: 1;">
+            <h1>Welcome to Takeover at the Summit 2025 </h1>
+            <p>You’re Invited To Takeover At The Summit 2025!</p>
+            <div class="register-button-container">
+                <a href="#" class="register-button">Register Now</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <img src="images/Chess design.png" alt="Chess Design" class="chess-image top-left">
+            <img src="images/Chess design.png" alt="Chess Design" class="chess-image bottom-right">
+            <p>Dear [Recipient's Name],</p>
+            <p>
+                We are thrilled to invite you to Takeover 2025,
+                an extraordinary event where innovation,
+                creativity, and collaboration come together to shape the future.
+            </p>
+        </div>
+
+        <div class="details">
+            <img src="images/image one.jpeg" alt="Event Image" class="event-image">
+            <img src="images/shadow frame.png" alt="Shadow Frame" class="shadow-frame">
+            <img src="images/3rd section.png" alt="Overlay Image" class="overlay-image">
+            <p>
+                For more information, visit: <a href="http://www.gharvestisland.org" style="color: #002f6c;">www.gharvestisland.org</a>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Follow us:</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" alt="Instagram"></a>
+                <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
     `;
 
     for (const email of emails) {
