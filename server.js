@@ -72,20 +72,19 @@ async function sendEmails() {
                            background-size: contain; 
                            max-width: 600px; 
                            width: 100%; 
-                           height: auto; 
-                           text-align: center;">
+                           height: 350px; 
+                           text-align: center; 
+                           padding: 40px;">
                     <tr>
-                        <td align="center" style="padding: 50px;">
-                            <h1 style="color: #ffffff; font-size: 36px; font-family: Arial, sans-serif; margin: 0;">
+                        <td align="center" style="padding: 40px;">
+                            <h1 style="color: #C2185B; font-size: 28px; font-family: Arial, sans-serif; margin: 0; 
+                                       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); padding-bottom: 10px; font-size: 60px;">
                                 Happy Valentine's Day! ❤️
                             </h1>
                         </td>
                     </tr>
                     <tr>
-                        <td align="center" style="padding: 20px;">
-                            <p style="color: #ffffff; font-size: 18px; font-family: Arial, sans-serif; margin: 0;">
-                                Sending you love and happiness today and always. 💖
-                            </p>
+                        <td align="center" style="padding: 15px;">
                         </td>
                     </tr>
                 </table>
@@ -94,7 +93,6 @@ async function sendEmails() {
     </table>
 </body>
 </html>
-
     `;
 
     for (const email of emails) {
