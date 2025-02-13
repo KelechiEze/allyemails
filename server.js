@@ -58,65 +58,35 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-                <!DOCTYPE html>
-                <html lang="en">
-
-                <head>
-                 <meta charset="UTF-8">
-                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                 <title>Takeover at the Summit 2025 Invitation</title>
-                </head>
-
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff;">
-    <table style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #ddd;" cellspacing="0" cellpadding="0">
-        <tr style="background-color: #002f6c; color: #ffffff; text-align: center; padding: 20px; position: relative; min-height: 200px;">
-            <td>
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/thesummit-2023-1-e1712249826695-1.png" alt="Takeover at the Summit" style="position: absolute; top: -10px; left: 10px; width: 150px;">
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/globedesign.png" alt="Globe Design" style="position: absolute; top: 50%; left: 85%; transform: translate(-50%, -50%); width: 160px; z-index: 1;">
-                <h1 style="margin: 45px; font-size: 25px; font-weight: bold; transform: translate(0%);">Welcome to Takeover at the Summit.</h1>
-                <p style="font-size: 18px; margin-top: 5px; position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 3;">You’re Invited To Takeover At The Summit 2025!</p>
-                <div style="margin-top: 25px;">
-                    <a href="#" style="display: inline-block; background-color: #ff6600; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold;">Register Now</a>
-                </div>
-            </td>
-        </tr>
-
-        <tr style="padding: 20px; position: relative; text-align: center; background-color: #f9f9f9;">
-            <td>
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" style="width: 100px; position: absolute; top: 5px; left: 30px;">
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/chess-design.png" alt="Chess Design" style="width: 100px; position: absolute; bottom: -1px; right: 30px;">
-                <p style="font-size: 18px; color: #555; line-height: 1.6;">Dear [Recipient's Name],</p>
-                <p style="font-size: 18px; color: #555; line-height: 1.6;">
-                    We are thrilled to invite you to Takeover 2025, an extraordinary event where innovation, creativity, and collaboration come together to shape the future.
-                </p>
-            </td>
-        </tr>
-
-        <tr style="position: relative; text-align: center; padding: 20px;">
-            <td>
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/image-one.jpeg" alt="Event Image" style="width: 100%; height: auto; object-fit: cover;">
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/shadow-frame.png" alt="Shadow Frame" style="width: 100%; height: 70%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(-1); border-radius: 5%; z-index: 1;">
-                <img src="https://kelechieze.wordpress.com/wp-content/uploads/2025/01/3rd-section.png" alt="Overlay Image" style="position: absolute; top: 50%; left: 50%; width: 30%; height: auto; object-fit: fill; z-index: 2; transform: translate(-50%, -50%);">
-                <p style="position: relative; z-index: 3; margin-top: 20px; font-size: 16px; color: #333;">
-                    For more information, visit: <a href="http://www.gharvestisland.org" style="color: #002f6c;">www.gharvestisland.org</a>
-                </p>
-            </td>
-        </tr>
-
-        <tr style="background-color: #002f6c; color: #ffffff; text-align: center; padding: 15px; font-size: 16px;">
-            <td>
-                <p>Follow us:</p>
-                <div>
-                    <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/facebook-new.png" alt="Facebook" style="width: 30px; margin: 0 5px;"></a>
-                    <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/twitter.png" alt="Twitter" style="width: 30px; margin: 0 5px;"></a>
-                    <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png" alt="Instagram" style="width: 30px; margin: 0 5px;"></a>
-                    <a href="#"><img src="https://img.icons8.com/material-rounded/24/000000/linkedin.png" alt="LinkedIn" style="width: 30px; margin: 0 5px;"></a>
-                </div>
+               <!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine's Email</title>
+</head>
+<body style="margin: 0; padding: 0;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td align="center" style="background: url('cid:valentine-bg') no-repeat center center; background-size: cover; padding: 50px 20px;">
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td align="center" style="padding: 30px;">
+                            <h1 style="color: #ffffff; font-size: 36px; font-family: Arial, sans-serif; margin: 0;">
+                                Happy Valentine's Day! ❤️
+                            </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="padding: 20px;">
+                            <p style="color: #ffffff; font-size: 18px; font-family: Arial, sans-serif; margin: 0;">
+                                Sending you love and happiness today and always. 💖
+                            </p>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>
 </body>
-
 </html>
 
     `;
