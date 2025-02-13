@@ -95,7 +95,7 @@ async function sendEmails() {
       const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: 'Welcome to Takeover at The Summit',
+        subject: 'Happy Valentines Day',
         html: emailTemplate, // Use the HTML template
       };
 
