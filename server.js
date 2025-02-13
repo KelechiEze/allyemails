@@ -58,7 +58,7 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-               <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Valentine's Email</title>
@@ -66,10 +66,16 @@ async function sendEmails() {
 <body style="margin: 0; padding: 0;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
         <tr>
-            <td align="center" style="background: url('https://kelechieze.wordpress.com/wp-content/uploads/2025/02/val-1.png') no-repeat center center; background-size: cover; padding: 50px 20px;">
-                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0">
+            <td align="center" style="padding: 20px;">
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" 
+                    style="background: url('https://kelechieze.wordpress.com/wp-content/uploads/2025/02/val-1.png') no-repeat center center; 
+                           background-size: contain; 
+                           max-width: 600px; 
+                           width: 100%; 
+                           height: auto; 
+                           text-align: center;">
                     <tr>
-                        <td align="center" style="padding: 30px;">
+                        <td align="center" style="padding: 50px;">
                             <h1 style="color: #ffffff; font-size: 36px; font-family: Arial, sans-serif; margin: 0;">
                                 Happy Valentine's Day! ❤️
                             </h1>
