@@ -66,7 +66,7 @@ async function sendEmails() {
 <body style="margin: 0; padding: 0;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
         <tr>
-            <td align="center" style="background: url('cid:valentine-bg') no-repeat center center; background-size: cover; padding: 50px 20px;">
+            <td align="center" style="background: url('https://kelechieze.wordpress.com/wp-content/uploads/2025/02/val-1.png') no-repeat center center; background-size: cover; padding: 50px 20px;">
                 <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0">
                     <tr>
                         <td align="center" style="padding: 30px;">
