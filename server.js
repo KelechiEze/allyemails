@@ -58,41 +58,82 @@ async function sendEmails() {
 
     // Email template
     const emailTemplate = `
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Valentine's Email</title>
-</head>
-<body style="margin: 0; padding: 0;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-        <tr>
-            <td align="center" style="padding: 20px;">
-                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" 
-                    style="background: url('https://kelechieze.wordpress.com/wp-content/uploads/2025/02/val-1.png') no-repeat center center; 
-                           background-size: contain; 
-                           max-width: 600px; 
-                           width: 100%; 
-                           height: 350px; 
-                           text-align: center; 
-                           padding: 40px;">
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>ILS 2025 Confirmation</title>
+          </head>
+          <body style="margin:0; padding:0; background-color:#f8f9fa; font-family:Arial, sans-serif;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8f9fa; padding:20px 0;">
+              <tr>
+                <td align="center">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:700px; background-color:#ffffff; border-radius:8px; overflow:hidden;">
                     <tr>
-                        <td align="center" style="padding: 40px;">
-                            <h1 style="color: #C2185B; font-size: 60px; font-family: 'Playfair Display', serif; margin: 0; 
-                                       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); padding-bottom: 10px;">
-                                Happy Valentine's Day! ❤️
-                            </h1>
-                        </td>
+                      <td>
+                        <!-- Header Image -->
+                        <img src="your-image-path.jpg" alt="ILS 2025 Banner" style="width:100%; display:block;" />
+                      </td>
                     </tr>
                     <tr>
-                        <td align="center" style="padding: 15px;">
-                        </td>
+                      <td style="padding:20px;">
+                        <!-- Main Content -->
+                        <h1 style="font-size:24px; color:#333366; margin-top:0;">ILS 2025 Conference Confirmation</h1>
+                        <p style="font-size:16px; color:#333;"><strong>Greetings Joseph Kolawole,</strong></p>
+                        <p style="font-size:16px; color:#333;">
+                          We are excited that you will join us at the <strong>Orange County Convention Center</strong> in sunny
+                          <strong>Orlando, FL</strong> for ILS 2025. This experience will equip you with invaluable leadership insights, help
+                          you further your professional development, and empower you with evergreen strategies for tomorrow's challenges.
+                        </p>
+
+                        <!-- Code Box -->
+                        <table width="100%" cellpadding="10" cellspacing="0" border="0" style="background-color:#f0f0f0; border-radius:6px; font-family:monospace; margin:20px 0;">
+                          <tr>
+                            <td style="font-size:16px; color:#333;">
+                              <strong>Registration Number:</strong> 1490211060001<br/>
+                              <strong>Verification Code:</strong> 040753
+                            </td>
+                          </tr>
+                        </table>
+
+                        <p style="font-size:16px; color:#333;">This correspondence serves as your confirmation for the 2025 ILS. Please review the important details below:</p>
+                        <ul style="font-size:16px; color:#333; padding-left:20px;">
+                          <li>This confirmation is exclusively for you and is non-transferable.</li>
+                          <li>Present this confirmation at check-in to receive your credentials.</li>
+                          <li>Visit <a href="https://thisisils.org" style="color:#333366; text-decoration:none;" target="_blank">ThisisILS.org</a> for additional information.</li>
+                        </ul>
+
+                        <p style="font-size:16px; color:#333;">
+                          If you haven’t already, <a href="#" style="color:#333366; text-decoration:none;">click here</a> to complete a brief survey. You can also manage your reservation using the button below. If you registered with a group, this portal allows you to add or update their information. Be sure to have your registration and verification numbers handy.
+                        </p>
+
+                        <!-- Button -->
+                        <p>
+                          <a href="#" style="display:inline-block; background-color:#333366; color:#ffffff; padding:12px 24px; border-radius:6px; font-weight:bold; text-decoration:none; font-size:16px;">Manage My Reservation</a>
+                        </p>
+
+                        <p style="font-size:16px; color:#333;">
+                          Please bring this confirmation with you. You may print it or have it available on your mobile device.
+                        </p>
+
+                        <p style="font-size:16px; color:#333;">Sincerely,<br/>ILS Registration Team</p>
+                      </td>
                     </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</body>
-</html>
+
+                    <!-- Footer -->
+                    <tr>
+                      <td style="padding:20px; background-color:#f0f0f0; text-align:center; font-size:14px; color:#666;">
+                        Copyright © 2025 T.D. JAKES MINISTRIES, All rights reserved.<br/>
+                        P.O. BOX 5390, DALLAS, TX 75208
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+        </html>
 
     `;
 
